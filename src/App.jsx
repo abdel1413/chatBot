@@ -1,4 +1,5 @@
 import { ChatInput } from "./components/ChatInput"
+import { Message } from "./components/Message"
 
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
   return (
     <>
     <ChatInput />
+    <Message/>
     </>
   )
 }

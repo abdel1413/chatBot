@@ -5,6 +5,7 @@ export const ChatInput = () => {
     <div> 
         <input type="text"  placeholder="How may i help you?" />
         <button>Send</button>
+        
     </div>
     </>
   )
