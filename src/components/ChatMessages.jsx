@@ -1,8 +1,8 @@
+import { useState } from "react"
 import { Message } from "./Message"
 
 export const ChatMessages = () => {
-
-     const  chatMesages = [
+   const [messages,setMessage] =  useState([
     {
       message:"Hello Chatbot",
       sender:"user",
@@ -23,10 +23,20 @@ export const ChatMessages = () => {
       sender:"robot",
       id:4
     }
-  ]
+  ]);
+
+  const sendMessage = () => {
+    const newMessage = {
+      message: "This is a new message",
+      sender: "user",
+      id: messages.length + 1
+    };
+    setMessage([...messages, newMessage]);
+  }
   return (
     <>
-      {chatMesages.map(({message,sender,id})=>(
+      <button onClick={sendMessage}>send Msg</button>
+      {messages.map(({message,sender,id})=>(
       <Message
       key={id}
       message={message} 
