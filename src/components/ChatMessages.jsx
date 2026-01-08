@@ -1,7 +1,9 @@
 
+import { useEffect, useRef } from "react";
 import { Message } from "./Message"
 
 export const ChatMessages = ({messages}) => {
+    const chatRef = useRef(null);
   
 //   const sendMessage = () => {
 //     const newMessage = {
@@ -11,11 +13,19 @@ export const ChatMessages = ({messages}) => {
 //     };
 //     setMessage([...messages, newMessage]);
 //   }
+
+  useEffect(() => {
+    if (chatRef.current) {
+      chatRef.current.scrollTop = chatRef.current.scrollHeight;
+    }
+  }, [messages]);
   return (
-    <div style={{display:"flex", flexDirection:"column", gap:"10px" , 
+    <div ref={chatRef}
+     style={{display:"flex", flexDirection:"column", gap:"10px" , 
     border:"1px solid black", padding:"10px",
-    width:"370px",
+    width:"370px", overflowY:"auto",  height:"400px",
     marginBottom:"5px"
+    
     }}>
       {/* <button onClick={sendMessage}>send Msg</button> */}
       {messages.map(({message,sender,id})=>(
