@@ -12,7 +12,11 @@ export const ChatMessages = ({messages}) => {
 //     setMessage([...messages, newMessage]);
 //   }
   return (
-    <>
+    <div style={{display:"flex", flexDirection:"column", gap:"10px" , 
+    border:"1px solid black", padding:"10px",
+    width:"370px",
+    marginBottom:"5px"
+    }}>
       {/* <button onClick={sendMessage}>send Msg</button> */}
       {messages.map(({message,sender,id})=>(
       <Message
@@ -20,6 +24,6 @@ export const ChatMessages = ({messages}) => {
       message={message} 
       sender={sender}/>
     ))}
-    </>
+    </div>
   )
 }

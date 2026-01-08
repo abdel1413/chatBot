@@ -3,7 +3,7 @@ import user from '../assets/user.png'
 import robot from '../assets/robot.png'
 export const Message = ({message,sender}) => {
    return ( 
-    <div style={{display:"flex", alignItems:"center", gap:"10px"}}>   
+    <div style={{display:"flex",alignItems:'center', gap:"10px" ,width:"100%",}}>   
       {sender === 'user' &&(
          <img   src={user} 
          style={{width:"50px" ,
@@ -13,10 +13,11 @@ export const Message = ({message,sender}) => {
             <p 
                 style={{background: "lightgray", 
                 color:'black' , 
-                padding:'5px'}}>
+                padding:'5px'
+                ,width:"80%",}}>
                     {message}
             </p>   
-               
+
        {sender === 'robot' &&(
          <img src={robot}  
          style={{width:"50px" ,

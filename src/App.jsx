@@ -32,12 +32,13 @@ function App() {
 
   return (
     <>
+    <ChatMessages 
+    messages={messages} /> 
     <ChatInput  
     messages={messages}
     setMessages={setMessages}
     />
-    <ChatMessages 
-    messages={messages} /> 
+    
     </>
   )
 }

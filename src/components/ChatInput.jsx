@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const ChatInput = ({messages, setMessages}) => {
+export const  ChatInput = ({messages, setMessages}) => {
   const [inputText, setInputText] =  useState("");  
   
 
@@ -8,9 +8,9 @@ export const ChatInput = ({messages, setMessages}) => {
       
         setInputText(e.target.value);
     }   
-    const sendMessage = () => {     
+     async function sendMessage(){     
        
-        console.log("Input Text:", inputText);
+        
         setMessages([
             ...messages,
             {
@@ -20,8 +20,7 @@ export const ChatInput = ({messages, setMessages}) => {
             }
         ]);
     
-       console.log("Messages after user input:", window.chatbot.getResponse(inputText) );
-        let chatbotResponse = window.chatbot.getResponse(inputText);
+        let chatbotResponse = await window.chatbot.getResponseAsync(inputText);
         
         setMessages(prevMessages => [       
             ...prevMessages,
@@ -36,8 +35,7 @@ export const ChatInput = ({messages, setMessages}) => {
     }
 
   return (
-    <div>
-    <h2 style={{margin: "0"}}>hello from chat input</h2>
+    
     <div> 
         <input style={{width:"300px", height:"30px" , marginRight:"10px"}}
         type="text" 
@@ -46,9 +44,9 @@ export const ChatInput = ({messages, setMessages}) => {
          onChange={getInput}
             value={inputText}
          />
-        <button onClick={sendMessage}>Send</button>
+        <button onClick={sendMessage} style={{backgroundColor: 'green', color: 'white'}}>Send</button>
         
     </div>
-    </div>
+  
   )
 }
