@@ -4,7 +4,7 @@ import { Message } from "./components/Message"
 import { useState } from "react"
 
 function App() {
- const [messages,setMessage] =  useState([
+ const [messages,setMessages] =  useState([
     {
       message:"Hello Chatbot",
       sender:"user",
@@ -34,7 +34,7 @@ function App() {
     <>
     <ChatInput  
     messages={messages}
-    setMessage={setMessage}
+    setMessages={setMessages}
     />
     <ChatMessages 
     messages={messages} /> 
