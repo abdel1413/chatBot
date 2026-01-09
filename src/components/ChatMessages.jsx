@@ -5,14 +5,6 @@ import { Message } from "./Message"
 export const ChatMessages = ({messages}) => {
     const chatRef = useRef(null);
   
-//   const sendMessage = () => {
-//     const newMessage = {
-//       message: "This is a new message",
-//       sender: "user",
-//       id: messages.length + 1
-//     };
-//     setMessage([...messages, newMessage]);
-//   }
 
   useEffect(() => {
     if (chatRef.current) {
