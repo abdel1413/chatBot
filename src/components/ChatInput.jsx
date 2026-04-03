@@ -42,7 +42,7 @@ export const  ChatInput = ({messages, setMessages}) => {
          onChange={getInput}
             value={inputText}
          />
-        <button onClick={sendMessage} style={{backgroundColor: 'green', color: 'white'}}>Send</button>
+        <button onClick={sendMessage} style={{backgroundColor: "#198755", color: 'white'}}>Send</button>
         
     </div>
   

@@ -31,7 +31,19 @@ function App() {
   
 
   return (
-    <>
+    <div>
+      <h2 style={{textAlign: "center", fontWeight:"bold", color:"#198755"}}> welcome to Chat Bot</h2>
+    <div style={{
+    border :"1px solid ", 
+    padding:"10px", 
+    width:"400px",
+     margin:"20px auto",
+      display:"flex",
+        justifyContent:"center",
+        alignItems:"center",
+        flexDirection:"column",
+     }}>
+       
     <ChatMessages 
     messages={messages} /> 
     <ChatInput  
@@ -39,7 +51,8 @@ function App() {
     setMessages={setMessages}
     />
     
-    </>
+    </div>
+    </div>
   )
 }
 
