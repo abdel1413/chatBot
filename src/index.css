@@ -20,11 +20,8 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  justify-content: center;
-  
   min-width: 320px;
   min-height: 100vh;
-   border: 2px solid red
 }
 
 h1 {
@@ -43,7 +40,7 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
   margin: 20px auto;
- 
+  border: 2px solid red
 }
 button:hover {
   border-color: #646cff;

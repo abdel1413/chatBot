@@ -9,8 +9,6 @@ export const  ChatInput = ({messages, setMessages}) => {
         setInputText(e.target.value);
     }   
      async function sendMessage(){     
-       
-        
         setMessages([
             ...messages,
             {
